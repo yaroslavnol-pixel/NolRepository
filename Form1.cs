@@ -7,14 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
-namespace WindowsFormsApp1
+namespace WindowsFormsApp2
 {
     public partial class Form1 : Form
     {
-        private object textBox1;
-
         public Form1()
         {
             InitializeComponent();
@@ -22,31 +19,18 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (!double.TryParse(textBox2.Text, out double number))
+            if (double.TryParse(txtSide.Text, out double side) && side > 0)
             {
-                labelResult.Text = "Введіть число!";
+                double perimeter = 4 * side;
+                double area = side * side;
+
+                lblPerimeter.Text = "Периметр: " + perimeter.ToString();
+                lblArea.Text = "Площа: " + area.ToString();
             }
             else
             {
-                if (number > 0) labelResult.Text = "Число додатне";
-                else if (number < 0) labelResult.Text = "Число від'ємне";
-                else labelResult.Text = "Це нуль";
+                MessageBox.Show("Помилка! Введіть додатне число.");
             }
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click_1(object sender, EventArgs e)
-        {
-
         }
     }
 }
