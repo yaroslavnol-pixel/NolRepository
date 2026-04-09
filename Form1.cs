@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp2
+namespace WindowsFormsApp3
 {
     public partial class Form1 : Form
     {
@@ -17,19 +17,20 @@ namespace WindowsFormsApp2
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            if (double.TryParse(txtSide.Text, out double side) && side > 0)
-            {
-                double perimeter = 4 * side;
-                double area = side * side;
+            string name = txtName.Text;
+            string studentClass = txtClass.Text;
+            string subject = txtSubject.Text;
 
-                lblPerimeter.Text = "Периметр: " + perimeter.ToString();
-                lblArea.Text = "Площа: " + area.ToString();
+            
+            if (name != "" && studentClass != "" && subject != "")
+            {
+                lblInfo.Text = "Учень " + name + " навчається у " + studentClass + " класі та найбільше любить " + subject;
             }
             else
             {
-                MessageBox.Show("Помилка! Введіть додатне число.");
+                MessageBox.Show("Заповніть всі поля!");
             }
         }
     }

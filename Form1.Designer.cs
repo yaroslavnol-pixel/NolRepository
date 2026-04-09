@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp2
+﻿namespace WindowsFormsApp3
 {
     partial class Form1
     {
@@ -28,58 +28,62 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtSide = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.lblPerimeter = new System.Windows.Forms.Label();
-            this.lblArea = new System.Windows.Forms.Label();
+            this.txtSubject = new System.Windows.Forms.TextBox();
+            this.txtClass = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.btnSubmit = new System.Windows.Forms.Button();
+            this.lblInfo = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // txtSide
+            // txtSubject
             // 
-            this.txtSide.Location = new System.Drawing.Point(339, 142);
-            this.txtSide.Name = "txtSide";
-            this.txtSide.Size = new System.Drawing.Size(100, 20);
-            this.txtSide.TabIndex = 0;
+            this.txtSubject.Location = new System.Drawing.Point(13, 76);
+            this.txtSubject.Name = "txtSubject";
+            this.txtSubject.Size = new System.Drawing.Size(100, 20);
+            this.txtSubject.TabIndex = 1;
             // 
-            // button1
+            // txtClass
             // 
-            this.button1.BackColor = System.Drawing.Color.Yellow;
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(274, 201);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(218, 93);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Обчислити";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.txtClass.Location = new System.Drawing.Point(119, 57);
+            this.txtClass.Name = "txtClass";
+            this.txtClass.Size = new System.Drawing.Size(100, 20);
+            this.txtClass.TabIndex = 2;
+            this.txtClass.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
-            // lblPerimeter
+            // txtName
             // 
-            this.lblPerimeter.AutoSize = true;
-            this.lblPerimeter.Location = new System.Drawing.Point(282, 175);
-            this.lblPerimeter.Name = "lblPerimeter";
-            this.lblPerimeter.Size = new System.Drawing.Size(58, 13);
-            this.lblPerimeter.TabIndex = 2;
-            this.lblPerimeter.Text = "Периметр";
+            this.txtName.Location = new System.Drawing.Point(50, 140);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(100, 20);
+            this.txtName.TabIndex = 3;
             // 
-            // lblArea
+            // btnSubmit
             // 
-            this.lblArea.AutoSize = true;
-            this.lblArea.Location = new System.Drawing.Point(422, 175);
-            this.lblArea.Name = "lblArea";
-            this.lblArea.Size = new System.Drawing.Size(42, 13);
-            this.lblArea.TabIndex = 3;
-            this.lblArea.Text = "Площа";
+            this.btnSubmit.Location = new System.Drawing.Point(297, 267);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(239, 72);
+            this.btnSubmit.TabIndex = 4;
+            this.btnSubmit.Text = "Показати анкету";
+            this.btnSubmit.UseVisualStyleBackColor = true;
+            // 
+            // lblInfo
+            // 
+            this.lblInfo.AutoSize = true;
+            this.lblInfo.Location = new System.Drawing.Point(333, 165);
+            this.lblInfo.Name = "lblInfo";
+            this.lblInfo.Size = new System.Drawing.Size(0, 13);
+            this.lblInfo.TabIndex = 5;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.lblArea);
-            this.Controls.Add(this.lblPerimeter);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.txtSide);
+            this.Controls.Add(this.lblInfo);
+            this.Controls.Add(this.btnSubmit);
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.txtClass);
+            this.Controls.Add(this.txtSubject);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -88,11 +92,11 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtSide;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label lblPerimeter;
-        private System.Windows.Forms.Label lblArea;
+        private System.Windows.Forms.TextBox txtSubject;
+        private System.Windows.Forms.TextBox txtClass;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.Button btnSubmit;
+        private System.Windows.Forms.Label lblInfo;
     }
 }
 
