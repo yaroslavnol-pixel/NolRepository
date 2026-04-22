@@ -1,4 +1,4 @@
-namespace MemeGallery
+namespace Minesweeper
 {
     internal static class Program
     {

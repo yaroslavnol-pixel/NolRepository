@@ -1,4 +1,4 @@
-﻿namespace MemeGallery
+﻿namespace Minesweeper
 {
     partial class Form1
     {
@@ -28,59 +28,66 @@
         /// </summary>
         private void InitializeComponent()
         {
-            pictureBox1 = new PictureBox();
-            btnPrev = new Button();
-            btnNext = new Button();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            lblMines = new Label();
+            lblStatus = new Label();
+            btnRestart = new Button();
+            gamePanel = new Panel();
             SuspendLayout();
             // 
-            // pictureBox1
+            // lblMines
             // 
-            pictureBox1.Location = new Point(111, 47);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(292, 148);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
+            lblMines.AutoSize = true;
+            lblMines.Location = new Point(80, 22);
+            lblMines.Name = "lblMines";
+            lblMines.Size = new Size(34, 15);
+            lblMines.TabIndex = 0;
+            lblMines.Text = "💣 15";
             // 
-            // btnPrev
+            // lblStatus
             // 
-            btnPrev.Location = new Point(148, 219);
-            btnPrev.Name = "btnPrev";
-            btnPrev.Size = new Size(75, 23);
-            btnPrev.TabIndex = 1;
-            btnPrev.Text = "⬅ Назад";
-            btnPrev.UseVisualStyleBackColor = true;
-            btnPrev.Click += btnPrev_Click;
+            lblStatus.AutoSize = true;
+            lblStatus.Location = new Point(80, 22);
+            lblStatus.Name = "lblStatus";
+            lblStatus.Size = new Size(0, 15);
+            lblStatus.TabIndex = 1;
             // 
-            // btnNext
+            // btnRestart
             // 
-            btnNext.Location = new Point(283, 219);
-            btnNext.Name = "btnNext";
-            btnNext.Size = new Size(75, 23);
-            btnNext.TabIndex = 2;
-            btnNext.Text = "Вперед ➡\n";
-            btnNext.UseVisualStyleBackColor = true;
-            btnNext.Click += btnNext_Click;
+            btnRestart.Location = new Point(159, 405);
+            btnRestart.Name = "btnRestart";
+            btnRestart.Size = new Size(157, 23);
+            btnRestart.TabIndex = 2;
+            btnRestart.Text = "🔄 Нова гра";
+            btnRestart.UseVisualStyleBackColor = true;
+            btnRestart.Click += btnRestart_Click;
+            // 
+            // gamePanel
+            // 
+            gamePanel.Location = new Point(80, 59);
+            gamePanel.Name = "gamePanel";
+            gamePanel.Size = new Size(388, 226);
+            gamePanel.TabIndex = 3;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(896, 519);
-            Controls.Add(btnNext);
-            Controls.Add(pictureBox1);
-            Controls.Add(btnPrev);
+            ClientSize = new Size(800, 450);
+            Controls.Add(gamePanel);
+            Controls.Add(btnRestart);
+            Controls.Add(lblStatus);
+            Controls.Add(lblMines);
             Name = "Form1";
             Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private PictureBox pictureBox1;
-        private Button btnPrev;
-        private Button btnNext;
+        private Label lblMines;
+        private Label lblStatus;
+        private Button btnRestart;
+        private Panel gamePanel;
     }
 }
